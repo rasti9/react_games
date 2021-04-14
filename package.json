@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack --mode=development",
     "start": "webpack serve --open",
-    "predeploy": "webpack --mode=production"
+    "predeploy": "webpack --mode=production",
+    "deploy": "git subtree split --branch gh-pages --prefix dist/ && git push origin gh-pages"
   },
   "babel": {
     "presets": [
@@ -18,8 +19,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^4.6.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-bootstrap": "^1.5.2",
+    "react-dom": "^17.0.2",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.13.15",
